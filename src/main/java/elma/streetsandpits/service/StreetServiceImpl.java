@@ -22,4 +22,9 @@ public class StreetServiceImpl implements StreetService {
     public List<Street> getAllStreets() {
         return streetRepository.findAll();
     }
+
+    @Override
+    public Street getSreetById(Integer id) {
+        return streetRepository.getOne(id);
+    }
 }

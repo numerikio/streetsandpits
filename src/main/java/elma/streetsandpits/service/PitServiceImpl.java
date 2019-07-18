@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("")
+@Service
 public class PitServiceImpl implements PitService {
 
     @Autowired
@@ -21,6 +21,6 @@ public class PitServiceImpl implements PitService {
 
     @Override
     public void addPit(Pit pit) {
-pitRepository.save(pit);
+        pitRepository.save(pit);
     }
 }

@@ -1,7 +1,8 @@
 package elma.streetsandpits.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Pit {
@@ -11,6 +12,7 @@ public class Pit {
     private Integer id;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
     private Street street;
 
     public Pit() {

@@ -6,6 +6,7 @@ import elma.streetsandpits.model.Street;
 import java.util.List;
 
 public interface PitService {
-List<Pit> getPitByStreet(Street street);
-void addPit (Pit pit);
+    List<Pit> getPitByStreet(Street street);
+
+    void addPit(Pit pit);
 }
