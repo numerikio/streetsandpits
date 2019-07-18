@@ -2,18 +2,15 @@ package elma.streetsandpits.controller;
 
 import elma.streetsandpits.model.Street;
 import elma.streetsandpits.service.StreetService;
-import org.omg.PortableServer.SERVANT_RETENTION_POLICY_ID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/street")
-public class Contr {
+public class ControllerApp {
 
     @Autowired
     private StreetService streetService;
@@ -29,4 +26,12 @@ public class Contr {
         System.out.println(street);
         return new ResponseEntity<>(street, HttpStatus.OK);
     }
-}
+    @PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<?> addStreet(@RequestBody Street street) {
+        Street newStreet = new Street();
+        newStreet.setName(street.getName());
+        streetService.saveStreet(newStreet);
+        return new ResponseEntity<>(newStreet, HttpStatus.CREATED);
+        }
+    }
+

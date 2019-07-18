@@ -45,4 +45,12 @@ public class Street {
         this.pitList = pitList;
     }
 
+    @Override
+    public String toString() {
+        return "Street{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pitList=" + pitList +
+                '}';
+    }
 }
