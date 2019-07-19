@@ -20,7 +20,9 @@ public class PitServiceImpl implements PitService {
     }
 
     @Override
-    public void addPit(Pit pit) {
-        pitRepository.save(pit);
+    public void deletePitByID(Integer id) {
+        pitRepository.deleteById(id);
     }
+
+
 }

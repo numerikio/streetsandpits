@@ -8,5 +8,5 @@ import java.util.List;
 public interface PitService {
     List<Pit> getPitByStreet(Street street);
 
-    void addPit(Pit pit);
+    void deletePitByID(Integer id);
 }

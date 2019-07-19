@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface StreetService {
-    void saveStreet(Street street);
+    Street saveStreet(Street street);
     List<Street>getAllStreets();
     Street getSreetById (Integer id);
+    Street addPit (Integer id);
 }
