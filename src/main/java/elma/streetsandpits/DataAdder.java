@@ -18,7 +18,7 @@ public class DataAdder {
     @PostConstruct
     private void addData(){
         Street street = new Street();
-        street.setName("AAAA");
+        street.setName("вул. Данила Щербаківського");
         List<Pit>pits = street.getPitList();
 
         Pit pit = new Pit();
@@ -35,7 +35,7 @@ public class DataAdder {
 
 
         Street street1 = new Street();
-        street1.setName("BBBB");
+        street1.setName("вул. Борщагівська");
         List<Pit>pits1 = street1.getPitList();
         Pit pit2 = new Pit();
         pit2.setStreet(street1);
